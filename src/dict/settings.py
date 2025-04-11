@@ -21,12 +21,14 @@ TEMPLATES_DIR.mkdir(exist_ok=True, parents=True)
 
 PROJECT_NAME = config('PROJECT_NAME', cast=str, default="unset project name")
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('DJANGO_SECRET_KEY', cast=str, default=get_random_secret_key())
-print(SECRET_KEY, get_random_secret_key()) # TODO: remove
+# print(SECRET_KEY, get_random_secret_key()) # TODO: remove
+print(config('DATABASE_URL', cast=str, default=""))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', cast=bool, default=True)
