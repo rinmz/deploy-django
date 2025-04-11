@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'commando',
 ]
 
 MIDDLEWARE = [
@@ -99,11 +101,7 @@ DATABASE_URL = config('DATABASE_URL', cast=str, default="")
 if DATABASE_URL:
     import dj_database_url
     if DATABASE_URL.startswith("postgres://") or DATABASE_URL.startswith("postgresql://"):
-        DATABASES = {
-            'default': dj_database_url.config(
-                default=DATABASE_URL,
-            )
-    }
+        DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
