@@ -1,5 +1,5 @@
 """
-WSGI config for dict project.
+WSGI config for dict project. (web server gateway interface)
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
