@@ -1,3 +1,6 @@
+# static files
+src/static_root/
+
 # MacOS
 .DS_Store
 
