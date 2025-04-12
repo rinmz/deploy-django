@@ -10,4 +10,4 @@ def hello_world(request):
     })
 
 def healthz_view(request):
-    return HttpResponse("OK")
+    return HttpResponse("OKK")
